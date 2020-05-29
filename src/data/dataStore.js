@@ -6,7 +6,7 @@ export const settings = {
     buttonCancel: 'Cancel',
     defaultText: 'Add new item',
   },
-  defaultListDescription: '<p>I can do all the things!!!</p>',
+  defaultListDescription: '<p>I can do nothing and live like a king!!!</p>',
   defaultColumnIcon: 'list-alt',
 };
 
