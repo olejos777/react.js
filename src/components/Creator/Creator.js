@@ -18,7 +18,7 @@ class Creator extends React.Component {
   }
 
   handleChange = event => {
-    // console.log(event);
+     console.log(event.target.value);
     this.setState({
       value: event.target.value,
       visibleButtons: event.target.value.length > 0
@@ -27,19 +27,24 @@ class Creator extends React.Component {
 
   handleOK = () => {
     if(this.state.value != ''){
-      this.props.action(this.state.value);
-      this.setState({
-        value: '',
-        visibleButtons: false
-      });
+      if (window.confirm("Do you really want to add Item: " + this.state.value)) {
+        this.props.action(this.state.value);
+        this.setState({
+          value: '',
+          visibleButtons: false
+        });
+      }
     }
   }
 
   handleCancel = () => {
-    this.setState({
-      value: '',
-      visibleButtons: false
+    if (window.confirm("Do you really want to leave?")) { 
+      this.setState({
+        value: '',
+        visibleButtons: false
     });
+  }
+    
   }
 
   render() {
