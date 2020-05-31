@@ -2,18 +2,23 @@ import React from 'react';
 import styles from './Column.scss';
 import PropTypes from 'prop-types';
 import Card from '../Card/Card';
-//import Creator from '../Creator/Creator';
-//import { settings } from '../../data/dataStore';
+import { settings } from '../../data/dataStore';
+import Creator from '../Creator/Creator';
 
 class Column extends React.Component {
   static propTypes = {
     title: PropTypes.node.isRequired,
     cards: PropTypes.array,
-    //icon: PropTypes.node,
+    addCard: PropTypes.func,
+    icon: PropTypes.node,
+  }
+
+  static defaultProps = {
+    icon: settings.defaultColumnIcon,
   }
 
   render() {
-    const {title, /*icon,*/ cards} = this.props;
+    const {title, /*icon,*/ cards, addCard} = this.props;
 
     return (
       <section className={styles.component}>
@@ -25,12 +30,12 @@ class Column extends React.Component {
           ))}
         </div>
 
-        {/*<div className={styles.creator}>
+        <div className={styles.creator}>
           <Creator
             text={settings.cardCreatorText}
-            action={title => this.addCard(title)}
+            action={addCard}
           />
-          </div>*/}
+        </div>
       </section>
     );
   }

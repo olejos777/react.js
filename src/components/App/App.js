@@ -19,7 +19,7 @@ class App extends React.Component {
         <h2 className={styles.subtitle}>{subtitle}</h2>
         {lists.map(listData => (
           <List key={listData.id} {...listData} />
-        ))};
+        ))}
       </main>
     );
   }
