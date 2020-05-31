@@ -15,10 +15,6 @@ class Column extends React.Component {
     cards: this.props.cards || [],
   }
 
-  static defaultProps = {
-    children: <p>I'm going to do nothing</p>,
-  }
-
   addCard(title) {
     this.setState(state => (
       {
@@ -27,8 +23,8 @@ class Column extends React.Component {
           {
             key: state.cards.length ? state.cards[state.cards.length - 1].key + 1 : 0,
             title,
-          }
-        ]
+          },
+        ],
       }
     ));
   }
@@ -51,7 +47,7 @@ class Column extends React.Component {
           />
         </div>
       </section>
-    )
+    );
   }
 }
 
