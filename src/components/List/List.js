@@ -3,9 +3,10 @@ import styles from './List.scss';
 import Hero from '../Hero/Hero.js';
 import PropTypes from 'prop-types';
 import Column from '../Column/ColumnContainer';
-import {settings} from '../../data/dataStore';
+import {settings, listData} from '../../data/dataStore';
 import ReactHtmlParser from 'react-html-parser';
 import Creator from '../Creator/Creator.js';
+
 
 class List extends React.Component {
   static propTypes = {
@@ -19,6 +20,7 @@ class List extends React.Component {
 
   static defaultProps = {
     description: settings.defaultListDescription,
+    image: listData.image,
   }
   
   render() {
@@ -30,7 +32,7 @@ class List extends React.Component {
           titleText={title} 
           imageSource={image}
         />
-
+        
         <div className={styles.description}>
           {ReactHtmlParser(description)}
         </div>

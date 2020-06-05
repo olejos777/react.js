@@ -1,7 +1,5 @@
 import shortid from 'shortid';
 
-// selectors - not applicable at the moment
-
 // action name creator e.g. app/lists/ADD_LIST
 const reducerName = 'lists';
 const createActionName = name => `app/${reducerName}/${name}`; 

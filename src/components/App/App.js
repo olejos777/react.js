@@ -24,7 +24,9 @@ class App extends React.Component {
     const { title, subtitle, lists, addList } = this.props;
 
     return (
+      
       <main className={styles.component}>
+        <Search />
         <h1 className={styles.title}>{title}</h1>
         <h2 className={styles.subtitle}>{subtitle}</h2>
         
@@ -32,13 +34,9 @@ class App extends React.Component {
           <List key={listData.id} {...listData} />
         ))}
 
-        <Search />
-
         <div className={styles.creator}>
           <Creator
-            text={settings.listCreatorText}
-            action={title => addList(title)}
-          />
+            text={settings.listCreatorText} action={addList} />
         </div>
       </main>
     );

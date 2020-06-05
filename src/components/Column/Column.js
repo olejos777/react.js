@@ -23,10 +23,13 @@ class Column extends React.Component {
 
     return (
       <section className={styles.component}>
-        <span className={styles.icon}>
-          <Icon name={icon} />
-        </span>
-        <h3 className={styles.title}>{title}</h3>
+        
+        <h3 className={styles.title}>
+          <span className={styles.icon}>
+            <Icon name={icon} />
+          </span>
+          {title}
+        </h3>
 
         <div className={styles.cards}>
           {cards.map(cardData => (
