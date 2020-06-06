@@ -2,9 +2,9 @@ import shortid from 'shortid';
 
 // selectors
 export const getCardsForColumns = 
-  ({cards, searchString}, columnId) => 
+  ({cards}, columnId) => 
     cards.filter(card => 
-      ((card.columnId == columnId) && (new RegExp(searchString, 'i').test(card.title))));
+      ((card.columnId == columnId)));
 
 export const getCardsForSearchResults =
   (cards, searchString) =>
