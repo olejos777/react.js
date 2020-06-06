@@ -20,6 +20,12 @@ export const settings = {
 export const pageContents = {
   title: 'My first React app',
   subtitle: 'A simple to-do app, with lists, columns and cards',
+  titleFaq: '(F)requently (A)sked (Q)uestions',
+  imageFaq: 'https://i0.wp.com/psychologiafotografii.pl/wp-content/uploads/2019/06/question-mark-1872665_1920.jpg?resize=1024%2C563&ssl=1',
+  faqDescription: `Here you'll findfrequently asked questions and solutions/answers`,
+  titleInfo: 'ToDo list Single Page application',
+  imageInfo: 'https://images.pexels.com/photos/3243090/pexels-photo-3243090.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+  infoDescription: 'Lorem ipsum tralalalalal ',
 };
 
 export const listData = {

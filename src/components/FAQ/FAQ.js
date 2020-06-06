@@ -3,14 +3,14 @@ import Container from '../Container/Container';
 import Hero from '../Hero/Hero';
 import {pageContents} from '../../data/dataStore';
 
-const Info = () => (
+const FAQ = () => (
   <Container>
     <Hero 
-      titleText={pageContents.titleInfo}
-      imageSource={pageContents.imageInfo}
+      titleText={pageContents.titleFaq}
+      imageSource={pageContents.imageFaq}
     />
     <p>{pageContents.faqDescription}</p>
   </Container>
 );
 
-export default Info;
+export default FAQ; 
